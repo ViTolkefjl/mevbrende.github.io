@@ -147,85 +147,19 @@ h2.sec-h b { font-weight: 700; color: var(--p); }
 .s-card h3 { font-family: 'Unbounded', sans-serif; font-size: 0.78rem; font-weight: 600; color: var(--ink); margin-bottom: 0.4rem; }
 .s-card p { font-size: 0.8rem; color: var(--gr); line-height: 1.6; }
 
-/* STEPS — Светлая и мягкая версия */
-#steps { 
-  background: var(--lav); /* Тот самый мягкий лавандовый */
-  padding: 8rem 5%; /* Увеличили отступы сверху и снизу, чтобы секция дышала */
-}
+/* STEPS */
+#steps { background: var(--lav); }
+#steps .sec-eyebrow { color: var(--plt); }
+#steps h2.sec-h { color: var(--ink); }
+#steps h2.sec-h b { color: var(--p); }
+#steps .sec-lead { color: var(--gr); }
+.steps-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--brd); border: 1px solid var(--brd); border-radius: var(--r); overflow: hidden; }
+.step-card { background: var(--w); padding: 2rem 1.8rem; transition: background .2s; }
+.step-card:hover { background: var(--bg); }
+.step-num { font-family: 'Unbounded', sans-serif; font-size: 2.5rem; font-weight: 700; color: var(--brd); line-height: 1; margin-bottom: 1.2rem; }
+.step-card h4 { font-family: 'Unbounded', sans-serif; font-size: 0.78rem; font-weight: 600; color: var(--ink); margin-bottom: 0.5rem; }
+.step-card p { font-size: 0.78rem; color: var(--gr); line-height: 1.6; }
 
-#steps .sec-eyebrow { 
-  color: var(--p); /* Делаем надпись "Как мы работаем" поярче */
-  margin-bottom: 1rem; 
-}
-
-#steps h2.sec-h { 
-  color: var(--ink); 
-  margin-bottom: 1.5rem; /* Отдаляем заголовок от подзаголовка */
-}
-
-#steps h2.sec-h b { 
-  color: var(--p); 
-}
-
-#steps .sec-lead { 
-  color: var(--gr); 
-  margin-bottom: 4rem; /* Большой отступ перед началом самих карточек */
-}
-
-.steps-grid { 
-  display: grid; 
-  grid-template-columns: repeat(4, 1fr); 
-  gap: 20px; /* Сделали реальные промежутки между карточками вместо 1px линий */
-  background: transparent; 
-  border: none; 
-}
-
-.step-card { 
-  background: var(--w); /* Белоснежные карточки */
-  padding: 2.5rem 2rem; 
-  border-radius: 20px; /* Закругленные углы для мягкости */
-  box-shadow: 0 10px 30px rgba(107, 63, 160, 0.04); /* Едва заметная тень */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: 1px solid var(--brd);
-}
-
-.step-card:hover { 
-  transform: translateY(-5px); /* Легкий интерактив при наведении */
-  box-shadow: 0 15px 35px rgba(107, 63, 160, 0.08);
-}
-
-.step-num { 
-  font-family: 'Unbounded', sans-serif; 
-  font-size: 2.5rem; 
-  font-weight: 700; 
-  color: var(--p); 
-  opacity: 0.15; /* Делаем цифры очень нежными, фоновыми */
-  line-height: 1; 
-  margin-bottom: 1.5rem; 
-  display: block;
-}
-
-.step-card h4 { 
-  font-family: 'Unbounded', sans-serif; 
-  font-size: 0.85rem; 
-  font-weight: 600; 
-  color: var(--ink); 
-  margin-bottom: 1rem; /* Расстояние от заголовка шага до описания */
-}
-
-.step-card p { 
-  font-size: 0.85rem; 
-  color: var(--gr); 
-  line-height: 1.6; 
-}
-
-/* Адаптив для мобилок */
-@media (max-width: 960px) {
-  .steps-grid { grid-template-columns: 1fr 1fr; }
-}
-@media (max-width: 560px) {
-  .steps-grid { grid-template-columns: 1fr; }
-}
 /* CONTACT */
 #contact { background: var(--bg); }
 .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
@@ -248,20 +182,21 @@ h2.sec-h b { font-weight: 700; color: var(--p); }
 .c-link-vk { background: #0077FF; color: #fff; }
 .c-link-tg { background: var(--lav); color: var(--p); }
 
-/* FOOTER — Светлая версия */
-footer { background: var(--bg); padding: 3rem 5% 2rem; border-top: 1px solid var(--brd); }
+/* FOOTER */
+footer { background: var(--bg); border-top: 1px solid var(--brd); padding: 3rem 5% 2rem; }
+.footer-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 2rem; margin-bottom: 2rem; flex-wrap: wrap; }
 .footer-logo { font-family: 'Unbounded', sans-serif; font-size: 1rem; font-weight: 700; color: var(--p); text-decoration: none; display: block; margin-bottom: 0.6rem; }
 .footer-desc { font-size: 0.78rem; color: var(--gr); max-width: 260px; line-height: 1.6; }
-
-.footer-col h5 { font-family: 'Unbounded', sans-serif; font-size: 0.72rem; font-weight: 600; color: var(--plt); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.8rem; }
+.footer-col h5 { font-family: 'Unbounded', sans-serif; font-size: 0.72rem; font-weight: 600; color: var(--gr); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.8rem; }
 .footer-col a, .footer-col p { display: block; font-size: 0.8rem; color: var(--gr); text-decoration: none; margin-bottom: 0.4rem; cursor: pointer; }
 .footer-col a:hover { color: var(--p); }
-
 .footer-bottom { border-top: 1px solid var(--brd); padding-top: 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.8rem; }
-.footer-bottom span { font-size: 0.72rem; color: var(--gr); opacity: 0.6; }
+.footer-bottom span { font-size: 0.72rem; color: var(--gr); }
 .footer-legal-links { display: flex; gap: 1.5rem; }
 .footer-legal-links a { font-size: 0.72rem; color: var(--gr); text-decoration: none; cursor: pointer; }
 .footer-legal-links a:hover { color: var(--p); }
+
+/* MODAL */
 .modal-overlay {
   position: fixed; inset: 0;
   background: rgba(26,16,37,0.7);
@@ -503,7 +438,7 @@ footer { background: var(--bg); padding: 3rem 5% 2rem; border-top: 1px solid var
     </div>
   </div>
   <div class="footer-bottom">
-    <span>© 2026 Мы в бренде. Все права защищены.</span>
+    <span>© 2024 Мы в бренде. Все права защищены.</span>
     <div class="footer-legal-links">
       <a onclick="openModal('privacy')">Политика конфиденциальности</a>
       <a onclick="openModal('offer')">Публичная оферта</a>
